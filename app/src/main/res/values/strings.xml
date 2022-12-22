@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Mung Exambro</string>
+    <string name="str_URLTextInput">Masukkan Alamat Server</string>
+    <string name="str_next">Lanjutkan</string>
+    <string name="str_scan_qr_mainmenu">Scan QR Code Alamat Server</string>
+    <string name="yes">Ya</string>
+    <string name="no">Tidak</string>
+    <string name="str_exit">Keluar</string>
+    <string name="str_makesure_exit">Yakin keluar dari aplikasi?</string>
+    <string name="str_about">Tentang</string>
+    <string name="str_refresh">Refresh</string>
+    <string name="str_scannig_qrcode">Memindai kode qr</string>
+    <string name="str_print">Print</string>
+</resources>

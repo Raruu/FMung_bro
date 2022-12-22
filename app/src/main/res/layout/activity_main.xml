@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/main_background"
+    android:theme="@style/Theme.MungExambro">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="365dp"
+        android:layout_height="wrap_content"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:boxBackgroundMode="outline"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/URLInputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/str_URLTextInput"
+            android:inputType="textPersonName"
+            android:textColorHint="#757575" />
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/Btn_GO"
+            android:layout_width="365dp"
+            android:layout_height="60dp"
+            android:text="@string/str_next"
+            android:onClick="GO_Onclick"/>
+        <Button
+            android:id="@+id/Btn_ScanQRMain"
+            android:layout_width="365dp"
+            android:layout_height="60dp"
+            android:text="@string/str_scan_qr_mainmenu"
+            android:onClick="QRScan_Onclick"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

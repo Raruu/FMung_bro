@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:title="@string/str_refresh"
+        android:id="@+id/BrMn_Refresh"
+        app:showAsAction="never"/>
+    <item
+        android:title="@string/str_print"
+        app:showAsAction="never"
+        android:id="@+id/BrMn_Print"/>
+    <item
+        android:title="@string/str_about"
+        android:id="@+id/BrMn_About"
+        app:showAsAction="never"/>
+    <item
+        android:title="@string/str_exit"
+        android:id="@+id/BrMn_Exit"
+        app:showAsAction="never"/>
+</menu>
