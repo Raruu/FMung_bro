@@ -5,17 +5,31 @@
     <item
         android:title="@string/str_refresh"
         android:id="@+id/BrMn_Refresh"
-        app:showAsAction="never"/>
+        app:showAsAction="never"
+        android:icon="@drawable/ic_refresh"/>
+    <item
+        android:title="@string/str_back"
+        app:showAsAction="never"
+        android:id="@+id/BrMn_PBack"
+        android:icon="@drawable/ic_arrow_left"/>
+    <item
+        android:title="@string/str_forward"
+        app:showAsAction="never"
+        android:id="@+id/BrMn_PForward"
+        android:icon="@drawable/ic_arrow_right"/>
     <item
         android:title="@string/str_print"
         app:showAsAction="never"
-        android:id="@+id/BrMn_Print"/>
+        android:id="@+id/BrMn_Print"
+        android:icon="@drawable/ic_printer_outline"/>
     <item
         android:title="@string/str_about"
         android:id="@+id/BrMn_About"
-        app:showAsAction="never"/>
+        app:showAsAction="never"
+        android:icon="@drawable/ic_information_outline"/>
     <item
         android:title="@string/str_exit"
         android:id="@+id/BrMn_Exit"
-        app:showAsAction="never"/>
+        app:showAsAction="never"
+        android:icon="@drawable/ic_exit_run"/>
 </menu>
