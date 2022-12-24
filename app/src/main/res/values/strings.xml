@@ -11,4 +11,6 @@
     <string name="str_refresh">Refresh</string>
     <string name="str_scannig_qrcode">Memindai kode qr</string>
     <string name="str_print">Print</string>
+    <string name="str_back">Back</string>
+    <string name="str_forward">Forward</string>
 </resources>
