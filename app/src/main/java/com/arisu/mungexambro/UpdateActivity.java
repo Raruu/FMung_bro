@@ -120,12 +120,12 @@ public class UpdateActivity extends AppCompatActivity {
                 UpdateAPKURL = StrRepo.substring(StrRepo.indexOf("browser_download_url") + 23, StrRepo.indexOf(".apk\"", StrRepo.indexOf("browser_download_url")) + 4);
                 ChangeLog = ChangeLog.substring(0, ChangeLog.length() - 3);
 
-                if(Float.parseFloat(Version) > Float.parseFloat(BuildConfig.VERSION_NAME)){
+                if(true||Float.parseFloat(Version) > Float.parseFloat(BuildConfig.VERSION_NAME)){
                     IsUpdateAvailable = true;
                     updateFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
                             +"/FakeMung/app-"+ Version +".apk");
                 }
-                listener.onProcessedCheckUpdate(Version +"\n\n" + getString(R.string.str_changelog) + ChangeLog + "\n" + UpdateAPKURL);
+                listener.onProcessedCheckUpdate(Version +"\n\n" + getString(R.string.str_changelog) + ChangeLog);
                 GitReleaseRepo.close();
             } catch (IOException e) {
                 Log.e("GitLink", e.toString());
@@ -169,7 +169,7 @@ public class UpdateActivity extends AppCompatActivity {
         Runnable backgroundRunnable = () -> {
             try {
                 if(!updateFile.exists()){
-                    if(updateFile.getParentFile().exists()) updateFile.getParentFile().mkdirs();
+                    if(!updateFile.getParentFile().exists()) updateFile.getParentFile().mkdirs();
                     BufferedInputStream bufferedInputStream = new BufferedInputStream(new URL(UpdateAPKURL).openStream());
                     FileOutputStream fileOutputStream = new FileOutputStream(updateFile);
                     int count;
