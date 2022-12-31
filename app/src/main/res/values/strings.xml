@@ -13,4 +13,12 @@
     <string name="str_print">Print</string>
     <string name="str_back">Back</string>
     <string name="str_forward">Forward</string>
+    <string name="str_downloading">Downloading. . .</string>
+    <string name="str_check">Check</string>
+    <string name="str_checking">Checking. . .</string>
+    <string name="str_update">Update</string>
+    <string name="str_updateavailable">Update available!</string>
+    <string name="str_noupdateavailable">No Update available. . .</string>
+    <string name="str_changelog">Change Log: \n</string>
+    <string name="str_install">Install</string>
 </resources>

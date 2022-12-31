@@ -8,15 +8,29 @@ import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.print.PrintAttributes;
 import android.print.PrintDocumentAdapter;
 import android.print.PrintManager;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.webkit.URLUtil;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class BrowserActivity extends AppCompatActivity {
     private WebView PageWebView;
@@ -76,6 +90,9 @@ public class BrowserActivity extends AppCompatActivity {
                 PrintDocumentAdapter printAdapter = PageWebView.createPrintDocumentAdapter(JobName);
                 //PrintJob printJob = printManager.print(JobName, printAdapter, new PrintAttributes.Builder().build());
                 printManager.print(JobName, printAdapter, new PrintAttributes.Builder().build());
+                return true;
+            case R.id.BrMn_Update:
+                startActivity(new Intent(this, UpdateActivity.class));
                 return true;
             case R.id.BrMn_About:
                 Dialog AbtDialog = new Dialog(this);

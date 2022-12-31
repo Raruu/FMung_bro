@@ -23,6 +23,11 @@
         android:id="@+id/BrMn_Print"
         android:icon="@drawable/ic_printer_outline"/>
     <item
+        android:title="@string/str_update"
+        app:showAsAction="never"
+        android:id="@+id/BrMn_Update"
+        android:icon="@drawable/ic_cellphone_arrow_down"/>
+    <item
         android:title="@string/str_about"
         android:id="@+id/BrMn_About"
         app:showAsAction="never"
