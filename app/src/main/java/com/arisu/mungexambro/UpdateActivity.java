@@ -4,8 +4,13 @@ import static androidx.core.content.FileProvider.getUriForFile;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -40,7 +45,23 @@ public class UpdateActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         setTitle(R.string.str_update);
         ((TextView)findViewById(R.id.UpdatePage_Changelog)).setMovementMethod(new ScrollingMovementMethod());
+        CheckWritePermission();
 
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(requestCode == 1 && grantResults[0] == PackageManager.PERMISSION_DENIED){
+            new AlertDialog.Builder(this).setMessage(R.string.str_plsallowpermissionrequest)
+                    .setPositiveButton(R.string.str_understand, (arg0,arg1) ->{ CheckWritePermission();})
+                    .setCancelable(false).show();
+        }
+    }
+
+    private void CheckWritePermission(){
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED)
+            requestPermissions( new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1);
     }
 
     @Override
@@ -120,7 +141,7 @@ public class UpdateActivity extends AppCompatActivity {
                 UpdateAPKURL = StrRepo.substring(StrRepo.indexOf("browser_download_url") + 23, StrRepo.indexOf(".apk\"", StrRepo.indexOf("browser_download_url")) + 4);
                 ChangeLog = ChangeLog.substring(0, ChangeLog.length() - 3);
 
-                if(true||Float.parseFloat(Version) > Float.parseFloat(BuildConfig.VERSION_NAME)){
+                if(Float.parseFloat(Version) > Float.parseFloat(BuildConfig.VERSION_NAME)){
                     IsUpdateAvailable = true;
                     updateFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
                             +"/FakeMung/app-"+ Version +".apk");

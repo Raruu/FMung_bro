@@ -21,4 +21,6 @@
     <string name="str_noupdateavailable">No Update available. . .</string>
     <string name="str_changelog">Change Log: \n</string>
     <string name="str_install">Install</string>
+    <string name="str_plsallowpermissionrequest">BAKA!</string>
+    <string name="str_understand">WAKARIMASHITA</string>
 </resources>
