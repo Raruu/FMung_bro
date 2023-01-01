@@ -146,7 +146,7 @@ public class UpdateActivity extends AppCompatActivity {
                     updateFile = new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS)
                             +"/FakeMung/app-"+ Version +".apk");
                 }
-                listener.onProcessedCheckUpdate(Version +"\n\n" + getString(R.string.str_changelog) + ChangeLog);
+                listener.onProcessedCheckUpdate(Version);
                 GitReleaseRepo.close();
             } catch (IOException e) {
                 Log.e("GitLink", e.toString());
