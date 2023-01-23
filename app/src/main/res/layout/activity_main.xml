@@ -9,7 +9,14 @@
     android:theme="@style/Theme.MungExambro">
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="365dp"
+        app:boxCornerRadiusBottomStart="5dp"
+        app:boxCornerRadiusBottomEnd="5dp"
+        app:boxCornerRadiusTopStart="5dp"
+        app:boxCornerRadiusTopEnd="5dp"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:boxBackgroundColor="@android:color/transparent"
         app:boxBackgroundMode="outline"
