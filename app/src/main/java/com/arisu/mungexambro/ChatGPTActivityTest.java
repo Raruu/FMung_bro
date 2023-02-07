@@ -27,7 +27,7 @@ public class ChatGPTActivityTest extends AppCompatActivity {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
         try {
-            String token = "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";
+            String token = "###";
             OpenAiService openAiService = new OpenAiService(token);
 
 
