@@ -23,4 +23,16 @@
     <string name="str_install">Install</string>
     <string name="str_plsallowpermissionrequest">BAKA!</string>
     <string name="str_understand">WAKARIMASHITA</string>
+    <string name="str_settings">Settings</string>
+    <string name="str_ChatGPT">ChatGPT</string>
+    <string name="str_token">Token</string>
+    <string name="str_enteryourtoken">Enter your Token</string>
+    <string name="str_set">Set</string>
+    <string name="str_model">Model</string>
+    <string name="str_temperature">Temperature</string>
+    <string name="str_maxtoken">Max Token</string>
+    <string name="title_activity_chat_gptactivity">ChatGPTActivity</string>
+    <string-array name="TestSpinner">
+        <item>ada</item>
+    </string-array>
 </resources>
