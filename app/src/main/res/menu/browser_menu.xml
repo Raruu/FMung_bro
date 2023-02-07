@@ -23,6 +23,11 @@
         android:id="@+id/BrMn_Print"
         android:icon="@drawable/ic_printer_outline"/>
     <item
+        android:title="@string/str_ChatGPT"
+        android:id="@+id/BrMn_LauchChatGPT"
+        app:showAsAction="never"
+        android:icon="@drawable/ic_openai"/>
+    <item
         android:title="@string/str_update"
         app:showAsAction="never"
         android:id="@+id/BrMn_Update"
@@ -37,4 +42,5 @@
         android:id="@+id/BrMn_Exit"
         app:showAsAction="never"
         android:icon="@drawable/ic_exit_run"/>
+
 </menu>
