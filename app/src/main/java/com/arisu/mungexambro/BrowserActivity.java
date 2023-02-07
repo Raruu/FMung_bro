@@ -10,27 +10,14 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.print.PrintAttributes;
 import android.print.PrintDocumentAdapter;
 import android.print.PrintManager;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.webkit.URLUtil;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
-
-import javax.net.ssl.HttpsURLConnection;
 
 public class BrowserActivity extends AppCompatActivity {
     private WebView PageWebView;
@@ -105,6 +92,9 @@ public class BrowserActivity extends AppCompatActivity {
                 return true;
             case R.id.BrMn_Exit:
                 finish();
+                return true;
+            case R.id.BrMn_LauchChatGPT:
+                startActivity(new Intent(this, ChatGPTActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
