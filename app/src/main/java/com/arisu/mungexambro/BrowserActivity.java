@@ -78,9 +78,9 @@ public class BrowserActivity extends AppCompatActivity {
                 //PrintJob printJob = printManager.print(JobName, printAdapter, new PrintAttributes.Builder().build());
                 printManager.print(JobName, printAdapter, new PrintAttributes.Builder().build());
                 return true;
-            case R.id.BrMn_Update:
+            /*case R.id.BrMn_Update:
                 startActivity(new Intent(this, UpdateActivity.class));
-                return true;
+                return true;*/
             case R.id.BrMn_About:
                 Dialog AbtDialog = new Dialog(this);
                 AbtDialog.setContentView(R.layout.about_page);
@@ -93,9 +93,9 @@ public class BrowserActivity extends AppCompatActivity {
             case R.id.BrMn_Exit:
                 finish();
                 return true;
-            case R.id.BrMn_LauchChatGPT:
+            /*case R.id.BrMn_LauchChatGPT:
                 startActivity(new Intent(this, ChatGPTActivity.class));
-                return true;
+                return true;*/
             default:
                 return super.onOptionsItemSelected(item);
         }
